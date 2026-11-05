@@ -1,0 +1,25 @@
+# نشر على Render بنقرة: New → Blueprint → اختر مستودع GitHub
+services:
+  - type: web
+    name: flix-cloud
+    runtime: python
+    plan: free            # الخطة المجانية: القرص مؤقت (راجع README_AR.md)
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false       # أدخله من لوحة Render
+      - key: ADMIN_ID
+        sync: false       # رقم حسابك على تيليجرام
+      - key: OWNER_USERNAME
+        value: owner
+      - key: OWNER_PASSWORD
+        generateValue: true   # كلمة مرور لوحة الويب (تظهر في Environment)
+      - key: PYTHON_VERSION
+        value: 3.12.3
+    # للحفاظ على البيانات بين عمليات النشر (خطة مدفوعة):
+    # disk:
+    #   name: data
+    #   mountPath: /opt/render/project/src/data
+    #   sizeGB: 5

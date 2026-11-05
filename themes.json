@@ -1,0 +1,13 @@
+{
+  "_help": "أضف ستايلاتك هنا. كل ستايل: مفتاح إنجليزي صغير، name، و knobs. القيم المسموحة: label (يجب أن يحوي {t})، quote: blockquote|expandable|bar|pre|none، bullet، divider، arrow، bar، spin: braille|dots|arrows|moon|clock|bounce|pulse، colors: original|all_primary|all_success|all_danger|roles|cycle، cols_main: 0-3، strip_emoji: true|false، header، footer. ثم من البوت: /studio ← الستايلات ← إعادة قراءة themes.json",
+  "presets": {
+    "sunrise": {
+      "name": "🌄 شروق",
+      "knobs": {"label": "✦ {t}", "bullet": "✦", "divider": "═", "colors": "cycle", "bar": "▰▱", "spin": "pulse", "quote": "expandable", "cols_main": 2, "header": "☀️ صباح الخير"}
+    },
+    "mono": {
+      "name": "⬛ أحادي",
+      "knobs": {"label": "[ {t} ]", "bullet": "-", "divider": "─", "quote": "pre", "colors": "all_primary", "strip_emoji": true, "cols_main": 1}
+    }
+  }
+}
